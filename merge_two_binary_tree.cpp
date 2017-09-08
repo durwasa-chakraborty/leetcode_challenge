@@ -21,25 +21,21 @@ struct TreeNode
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
-TreeNode* t3 = TreeNode();
-
 class Solution {
 public:
-    TreeNode* mergeTrees(TreeNode* t1, TreeNode* t2) {
+    TreeNode* mergeTrees(TreeNode *t1, TreeNode *t2) {
 
-        while(t1->left!=NULL or t2->left!=NULL) {
-            int temp_val = t1->val+t2->val;
-            ((t3->left == NULL and t3->right == NULL) and !(t3->val))? t3(temp_val) : t3->left(temp_val);
-            return mergeTrees(TreeNode* t1->left, TreeNode* t2->left);
-        }
+        if(t1 == NULL) return t2;
+        if(t2 == NULL) return t1;
 
-        while(t1->right!=NULL or t2->right!=NULL) {
-            int temp_val = t1->val + t2->val;
-            ((t3->left == NULL and t3->right == NULL)and !(t3->val))? t3(temp_val): t3->right(temp_val);
-            return mergeTrees(TreeNode* t1->right, TreeNode* t2->right);
-        }
-
-    return t3;
+        TreeNode *node = new TreeNode(add(t1->val,t2->val));
+        node->left = mergeTrees(t1->left,t2->left);
+        node->right = mergeTrees(t1->right,t2->right);
+        return node;
 
     }
-};
+
+    int add (int x, int y) { return x+y;}
+}
+
+ 
