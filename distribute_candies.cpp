@@ -22,7 +22,7 @@
 #include <stdlib.h>
 #include <assert.h>
 
-using namespace std;
+using namespace std;	
 
 class Solution {
 public:
