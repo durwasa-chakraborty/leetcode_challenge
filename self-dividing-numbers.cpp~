@@ -1,0 +1,41 @@
+#include <iostream>
+#include <vector>
+
+#define pb push_back
+
+class Solution {
+public:
+  std::vector<int> selfDividingNumbers(int left, int right) {
+
+    std::vector<int> ans;
+    for(int i=left;i<=right;i++) {
+      isSelfDividingNumber(i)?
+	pb.(i):continue;
+    }
+    return ans;
+  }
+
+  bool isSelfDividingNumber(int num) {
+    bool flag = false;
+    while(num) {
+      if(num%(num%10)==0)
+	flag=true;
+      else{
+	flag=false;
+	break;
+      }
+      num/=10;
+    }
+    return flag;
+  }
+};
+
+int main(int argc, char**argv)
+{
+  Solution sol = Solution();
+  std::vector<int> ans = sol.selfDividingNumbers(1,198);
+  for(int a : ans)
+    std::cout<<a<<std::endl;
+}
+
+  

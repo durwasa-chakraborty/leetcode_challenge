@@ -1,10 +1,11 @@
-/*Input: 
-    Tree 1                                       
+/*
+Input: 
+Tree                                        
           1                                                 
          / \                                              
         0   2                           
 Output: 
-Merged tree:
+Trim tree:
          1
         / \
        0   2
