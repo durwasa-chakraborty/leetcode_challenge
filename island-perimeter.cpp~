@@ -1,0 +1,52 @@
+#include <iostream>
+#include <vector>
+
+class Solution {
+public:
+  int islandPerimeter(vector<vector<int>>& grid) {
+
+    
+
+
+  }
+
+
+};
+
+int main(int argc, char **argv){
+  Solution sol = Solution();
+  vector<int> row;
+  vector<vector<int>> grid;
+  // construct rows
+  row.pb(0);
+  row.pb(1);
+  row.pb(0);
+  row.pb(1);
+  grid.pb(row);
+  row.clear();
+  // construct row 2
+  row.pb(0);
+  row.pb(1);
+  row.pb(0);
+  row.pb(1);
+  grid.pb(row);
+  row.clear();
+  //construct row 3
+  row.pb(0);
+  row.pb(1);
+  row.pb(0);
+  row.pb(1);
+  grid.pb(row);
+  row.clear();
+  // construct row 4
+  row.pb(0);
+  row.pb(1);
+  row.pb(0);
+  row.pb(1);
+  grid.pb(row);
+  row.clear();
+  
+  vector<vector<int>> ans = sol.islandPerimeter(grid);
+
+
+}
