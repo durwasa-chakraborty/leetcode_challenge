@@ -1,0 +1,37 @@
+#include <iostream>
+#include <vector>
+#include <stack>
+#include <algorithm>
+#include <unordered_map>
+
+using namespace std;
+
+class Solution {
+public:
+  vector<int> nextGreaterElement(vector<int> &findNums, vector<int> nums)
+  {
+    vector<int> ans;
+    stack<int> s;
+    unordered_map<int,int> map;
+
+    for(vector<int>::iterator itr = nums.begin();
+	itr!= nums.end();
+	itr++) {
+      while(s.size() and s.top()<(*itr)) {
+	map[s.top()] = (*itr);
+	s.pop();
+      }
+      s.push(*itr);
+    }
+
+    for(vector<int>::iterator itr = findNums.begin();
+	itr!=findNums.end();
+	itr++) {
+      if(map.count(*itr))
+	ans.push_back(map[*itr]);
+      else
+	ans.push_back(-1);
+    }
+      
+  }
+}
