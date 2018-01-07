@@ -44,7 +44,5 @@ int main(int argc, char**argv)
   vector <int> ans = sol.nextGreaterElement(findNums,nums);
   for(int x : ans)
     std::cout<<x<<std::endl;
- 
-
 }
 
