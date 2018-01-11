@@ -1,0 +1,57 @@
+#include <iostream>
+#include <vector>
+
+struct TreeNode {
+  TreeNode *left;
+  TreeNode *right;
+  int val;
+  TreeNode(int x) : val(x),left(NULL),right(NULL){};
+};
+
+class Solution {
+public:
+  int maxDepth(TreeNode *root)
+  {
+    
+    return max(leftMaxDepth(root->left),rightMaxDepth(root->right));
+  }
+
+  int leftMaxDepth(root) {
+    int count = 1;
+    if(root==NULL)
+      return count;
+    else {
+      count+=1;
+      leftMaxDepth(root->left);
+      leftMaxDepth(root->right);
+    }
+    return count;
+  }
+  int rightMaxDepth(root) {
+    int count = 1;
+    if(root==NULL)
+      return count;
+    else {
+      count+=1;
+      rightMaxDepth(root->left);
+      rightMaxDepth(root->right);
+    }
+    return count;
+  }
+};
+
+int main(int argc, char**argv)
+{
+  TreeNode root = new TreeNode(1);
+  TreeNode root->left = new TreeNode(2);
+  TreeNode root->right = new TreeNode(3);
+  TreeNode root->left->left = new TreeNode(4);
+  TreeNode root->left->left->left = new TreeNode(5);
+
+  Solution sol = Solution();
+  std::cout<<sol.maxDepth(root);
+  
+
+}
+
+  
