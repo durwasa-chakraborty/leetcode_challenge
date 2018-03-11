@@ -1,0 +1,16 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+class Solution {
+public:
+  int maxAreaOfIsland(vector<vector<int>>& grid) {
+    int column = 0;
+    int row = 0;
+    int neighbours = 0;
+    int count = 0;
+
+    return ans;
+  }
+
+}
