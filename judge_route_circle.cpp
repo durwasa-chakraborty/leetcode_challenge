@@ -18,12 +18,13 @@ public:
         }
         return (x_axis==0 and y_axis==0)?true:false;
     }
-    
+
 };
 
 int main(int argc, char const *argv[])
 {
     Solution sol = Solution();
+    std::vector<int> v;
     std::cout<<sol.judgeCircle("LL")<<std::endl;
     return 0;
 }

@@ -2,7 +2,7 @@
 #include <vector>
 
 #define pb push_back
-#define CHECK cout<<"------------------------"
+
 
 using namespace std;
 class Solution {
@@ -13,31 +13,30 @@ public:
     int row = 0;
     int neighbours = 0;
     int count=0;
-
     // Continuous occurrence of 1 along rows
     for(vector<vector<int>>::iterator itr=grid.begin();
-	itr!=grid.end();
-	itr++)
+        itr!=grid.end();
+        itr++)
       {
-	for(vector<int>::iterator itr_row = itr->begin();
-	    (itr_row)!=itr->end();
-	    (itr_row)++)
-	  {
-	    if((*itr_row)==1)
-	      {
-		count+=1;
-		if(row!=0 and grid[row-1][column]==1)
-		  neighbours+=1;
-		if(column!=0  and grid[row][column-1]==1)
-		  neighbours+=1;
-	      }
-	    column+=1;
-	  }
-	column=0;
-	row+=1;
+        for(vector<int>::iterator itr_row = itr->begin();
+            (itr_row)!=itr->end();
+            (itr_row)++)
+          {
+            if((*itr_row)==1)
+              {
+                count+=1;
+                if(row!=0 and grid[row-1][column]==1)
+                  neighbours+=1;
+                if(column!=0  and grid[row][column-1]==1)
+                  neighbours+=1;
+              }
+            column+=1;
+            itr->
+          }
+        column=0;
+        row+=1;
       }
     return count*4 - neighbours*2;
-    
   }
 };
 

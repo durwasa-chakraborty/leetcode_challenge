@@ -18,20 +18,20 @@ public:
       return 0;
     else {
       q.push(root);
+      q.
       while(!q.empty())
-	{
-	  int s = q.size();
-	  for(int i = 0 ; i < s; i+=1) {
-	    TreeNode *tmp = q.front();
-	    if(tmp->left!=NULL)
-	      q.push(tmp->left);
-	    if(tmp->right!=NULL)
-	      q.push(tmp->right);
-	    q.pop();
-	  }
-	  
-	  count+=1;
-	}
+        {
+          int s = q.size();
+          for(int i = 0 ; i < s; i+=1) {
+            TreeNode *tmp = q.front();
+            if(tmp->left!=NULL)
+              q.push(tmp->left);
+            if(tmp->right!=NULL)
+              q.push(tmp->right);
+            q.pop();
+          }
+          count+=1;
+        }
       return count;
     }
   }
