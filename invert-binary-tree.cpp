@@ -2,6 +2,7 @@
 #include <vector>
 #include <stack>
 #include <queue>
+#include <iterator>
 
 struct TreeNode {
   TreeNode* left;
@@ -14,6 +15,7 @@ class Solution {
 public:
   TreeNode* invertTree(TreeNode* root) {
     std::queue<TreeNode*> q;
+    for(std::vector<int>::iterator)
     if(root==NULL)
       return root;
     else {
