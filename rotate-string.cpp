@@ -8,6 +8,11 @@
 class Solution {
 public:
   bool rotateString(std::string a, std::string b) {
+    if(a.compare(b)==0)
+      return true;
+    if(a.length() != b.length())
+      return false;
+
     int _len = a.length();
     bool flag = false;
     for (int i = 0 ; i < b.length(); i++) {
