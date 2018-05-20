@@ -1,5 +1,7 @@
 class Solution(object):
     def add_digits(self,num):
+        if num is 0:
+            return 0
         _ret = num % 9
         if _ret is 0:
             return 9

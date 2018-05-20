@@ -1,0 +1,10 @@
+* Invert Binary Tree problem
+#+Import Statements
+import queue # in python 2
+import Queue # in python 3
+
+***** Queue initialized by q = queue.Queue() 
+***** Queue initialized by q = Queue() in python 3 
+***** put command to insert element
+***** get command to dequeue
+***** q.qsize() method to get the queue size (as evident from the name)

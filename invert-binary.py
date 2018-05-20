@@ -7,8 +7,7 @@ class TreeNode(object):
 
 class Solution(object):
     def invert_tree(self,root):
-        if root is None:
-            return root
+        if root is None: return root
         else:
             q = queue.Queue()
             q.put(root)
@@ -16,10 +15,8 @@ class Solution(object):
                 size = q.qsize()
                 for i in range(0,size):
                     tmp=q.get()
-                    if tmp.left is not None:
-                        q.put(tmp.left)
-                    if tmp.right  is not None:
-                        q.put(tmp.right)
+                    if tmp.left is not None:  q.put(tmp.left)
+                    if tmp.right  is not None: q.put(tmp.right)
                     tmp.left,tmp.right = tmp.right,tmp.left
         return root
 
