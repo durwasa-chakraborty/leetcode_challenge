@@ -3,8 +3,34 @@
 import queue # in python 2
 import Queue # in python 3
 
+
 ***** Queue initialized by q = queue.Queue() 
 ***** Queue initialized by q = Queue() in python 3 
 ***** put command to insert element
 ***** get command to dequeue
 ***** q.qsize() method to get the queue size (as evident from the name)
+
+**** Algorithm 
+***** take the element insert in queue
+***** put the children in the queue
+***** check whether left is not NULL before inserting left element
+***** check whether right is not NULL before inserting right element
+***** Python swap a,b = b,a
+
+* Employee Importance 
+#+Use of dictionary / map
+dict = {}
+dict[id] = [element1,element2]
+dict[id][0] # for element1
+dict[id][1] # for element2
+
+***** Use pop for a list 
+***** Use extend to extend a list
+***** list.extend(something)
+
+* Move Zeroes 
+The real challenge in this question is to solve the problem in linear time.
+The intuition behind bubble sort works fine. 
+
+***** list.count(elem) gives the count of the element present in the list
+

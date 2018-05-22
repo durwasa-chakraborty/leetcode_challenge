@@ -36,13 +36,11 @@ class Solution(object):
             else :
                 dict[employee.id] = [employee.importance,employee.subordinates]
 
-        if not subordinate:
-            return total_importance
-
         while subordinate :
             subordinate_id = subordinate.pop(0)
-            subordinate += dict[subordinate_id][1]
             total_importance+= dict[subordinate_id][0]
+            if dict[subordinate_id][1]:
+                subordinate.extend(dict[subordinate_id][1])
         return total_importance
 
 def main():
@@ -50,11 +48,8 @@ def main():
     emp_2 = Employee(2,2,[])
     emp_3 = Employee(3,3,[])
 
-    employees = list()
-    employees.append(emp_1)
-    employees.append(emp_2)
-    employees.append(emp_3)
-
+    employees = [emp_1,emp_2,emp_3]
+    
     sol = Solution()
     print sol.get_importance(employees,1)
 
@@ -62,3 +57,4 @@ def main():
 
 if __name__=="__main__":
     main()
+
